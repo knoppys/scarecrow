@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Alex Knopp @ www.knoppys.co.uk">
+<meta name="description" content="Scarecrow framework by Alex Knopp @ knoppys.co.uk.">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Scarecrow CSS Framework</title>
+<!--[if lt IE 9]> <script src="dist/html5shiv.js"></script> <![endif]-->
+<style type="text/css">
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    border: 0 none;
+    font: inherit;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+body{line-height:1;}
+ol,ul{list-style:none outside none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}
+ins{text-decoration:none;}
+del{text-decoration:line-through;}
+table{border-collapse:collapse;border-spacing:0;}
+h1,h2,h3,h4,h5,h6{display: block;}
+h1{font-size:20px;}
+h2{font-size:18px;}
+h3{font-size:16px;}
+h4{font-size:14px;}
+h5{font-size:13px;}
+h6{font-size:12px;}
+table{margin:10px 0;width: 100%; padding: 5px;clear: both;}
+td{padding:3px;border:1px solid #ffffff;}
+button{background-color: none;border:none; cursor: pointer;transition:1s all ease;}
+button:hover{background: none;}
+.red-button{background-color: #FF0000;border: 1px solid #FF0000;padding: 15px;color: #ffffff}
+.clear-button{background: none;padding: 15px;color: #ffffff; border:1px solid #fff;}
+.blue-button{background-color: #00BFFF;border:1px solid #00BFFF; padding: 15px;color: #ffffff}
+.grid{max-width:1145px;margin:0 auto;}
+.center .unit{float:none;margin:0 auto;}
+.right .unit{float:none;margin-left:auto;}
+.unit{background:none repeat scroll 0 0 green;color:#FFF;float:left;font-family:arial;text-align:center;vertical-align:top;transition:all 1s ease;padding:10px 0;}
+.wrapper{position:relative;margin:70px 0;}
+header{height:30px;position:fixed;top:0;width:100%;}
+footer{bottom:0;position:fixed;width:100%;}
+.row{clear:both;}
+.two{width:50%;transition:1s ease;}
+.three{width:33.3333%;}
+.four{width:25%;}
+.two-of-five{width:40%;}
+.three-of-five{width:60%;}
+.four-of-five{width:80%;}
+.full,.one{width:100%;}
+.five,.one-of-five{width:20%;}
+
+
+
+@media (max-width: 600px) {
+.grid{max-width:768px;}
+.one,.two,.three,.four,.five{display:block;width:100%;}
+.unit{float:none;padding:10px 0;}
+.one-of-five,.two-of-five,.three-of-five,.four-of-five{width:100%;margin:0 auto;}
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="wrapper"> 
+<header>
+	<section>
+		<h2 style="display:none;">Full width static header</h2>
+		<div class="row">
+			<div class="unit full">full width</div>
+		</div>
+	</section>
+</header>
+
+<div class="main">
+<section>
+	<h2 style="display:none;">This is where the grid starts</h2>
+		<div class="grid"> 
+			<div class="row">
+				<div class="unit one">one</div>			
+			</div>
+			<div class="row">
+				<div class="unit two">two </div>
+				<div class="unit two">two </div>		
+			</div>
+			<div class="row">
+				<div class="unit three">three</div>
+				<div class="unit three">three</div>	
+				<div class="unit three">three</div>	
+			</div>
+			<div class="row">
+				<div class="unit four">four</div>
+				<div class="unit four">four</div>
+				<div class="unit four">four</div>
+				<div class="unit four">four</div>
+			</div>
+			<div class="row">
+				<div class="unit five">five</div>
+				<div class="unit five">five</div>
+				<div class="unit five">five</div>
+				<div class="unit five">five</div>
+				<div class="unit five">five</div>
+			</div>
+		</div>
+	</section>
+	
+	<section>
+		<h2 style="display:none;">Center columns</h2>
+		<div class="grid center">
+			<div class="row">
+				<div class="unit one-of-five">one</div>	
+				<div class="unit two-of-five">two</div>	
+				<div class="unit three-of-five">three</div>
+				<div class="unit four-of-five">four</div>
+				<div class="unit one">five</div>
+			</div>		
+		</div>			
+	</section>
+	
+	<section>
+		<h2 style="display:none;">Staggered columns</h2>
+		<div class="grid">
+			<div class="row">
+				<div class="unit one-of-five">one</div>
+				<div class="unit four-of-five">four</div>		
+				<div class="unit two-of-five">two</div>
+				<div class="unit three-of-five">three</div>
+				<div class="unit three-of-five">three</div>
+				<div class="unit two-of-five">two</div>
+				<div class="unit four-of-five">four</div>
+				<div class="unit one-of-five">one</div>
+				
+			</div>	
+		</div>
+	</section>
+
+	<section>
+		<h2 style="display:none;">Columns pushed to the right</h2>
+		<div class="grid right">
+			<div class="row">
+				<div class="unit one-of-five">one</div>				
+				<div class="unit two-of-five">two</div>
+				<div class="unit three-of-five">three</div>				
+				<div class="unit four-of-five">four</div>
+				
+			</div>	
+		</div>
+	</section>	
+
+	<section>
+		<div class="grid center">
+			<div class="row">
+				<div class="unit two">
+					<h1>h1 Scarecrow framework by Alex Knopp</h1>
+					<h2>h2 Scarecrow framework by Alex Knopp</h2>
+					<h3>h3 Scarecrow framework by Alex Knopp</h3>
+					<h4>h4 Scarecrow framework by Alex Knopp</h4>
+					<h5>h5 Scarecrow framework by Alex Knopp</h5>
+					<h6>h6 Scarecrow framework by Alex Knopp</h6>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="grid center">
+			<div class="row">
+				<div class="unit two">				
+					<button type="button" class="red-button">Click Me!</button>
+					<button type="button" class="clear-button">Click Me!</button>
+					<button type="button" class="blue-button">Click Me!</button>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+</div><!-- End main -->
+	<footer>
+		<section class="footer">
+			<h2 style="display:none;">Static full width Footer</h2>
+			<div class="row">
+				<div class="unit full">full width</div>
+			</div>
+		</section>	
+	</footer>
+</div><!-- End wrapper -->
+
+
+
+
+
+</body>
+</html>
