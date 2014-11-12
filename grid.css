@@ -29,6 +29,7 @@ button:hover{background:none repeat scroll 0 0 rgba(0,0,0,0);}
 header{height:30px;position:fixed;top:0;width:100%;}
 footer{bottom:0;position:fixed;width:100%;}
 .row{clear:both;}
+.clearfix{overflow: auto;}
 .one-of-eight{width:8%;}
 .two-of-eight{transition:all 1s ease 0;width:20%;}
 .three-of-eight{transition:all 1s ease 0;width:32.5%;}
@@ -37,7 +38,7 @@ footer{bottom:0;position:fixed;width:100%;}
 .six-of-eight{transition:all 1s ease 0;width:80%;}
 .seven-of-eight{transition:all 1s ease 0;width:92%;}
 .eight-of-eight{transition:all 1s ease 0;width:100%;}
-@media max-width 600px {
+@media all and (max-width:600px) {
 .grid{max-width:768px;}
 .unit{float:none;padding:10px 0;}
 .one-of-eight,.two-of-eight,.three-of-eight,.four-of-eight,.five-of-eight,.six-of-eight,.seven-of-eight,.eight-of-eight{margin:0 auto;width:100%;}
